@@ -13,14 +13,19 @@
     "@gridsome/transformer-remark": "^0.6.4",
     "@gridsome/vue-remark": "^0.2.6",
     "axios": "^0.21.1",
-    "gridsome": "^0.7.23",
+    "gridsome": "^0.7.0",
     "gridsome-plugin-remark-shiki": "^0.6.0",
     "gridsome-plugin-rss": "^1.2.0",
     "vue-fuse": "^2.2.1",
-    "vue-scrollto": "^2.20.0"
+    "vue-scrollto": "^2.20.0",
+    "webpack": "^5.88.2",
+    "yarn": "^1.22.19"
   },
   "devDependencies": {
-    "cypress": "^6.8.0",
-    "gridsome-plugin-tailwindcss": "^3.0.1"
+    "autoprefixer": "^10.4.15",
+    "gridsome-plugin-tailwindcss": "^4.1.1",
+    "gridsome-plugin-tailwindcss2": "^3.0.1",
+    "postcss": "^8.4.29",
+    "tailwindcss": "^3.3.3"
   }
 }

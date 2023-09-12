@@ -10,31 +10,10 @@ module.exports = {
   siteUrl: 'https://gridsome-portfolio-starter.netlify.com',
   plugins: [
     {
-      use: 'gridsome-plugin-tailwindcss',
-    },
-    {
-      use: '@gridsome/vue-remark',
+      use: 'gridsome-plugin-tailwindcss2',
       options: {
-        typeName: 'Documentation', // Required
-        baseDir: './docs', // Where .md files are located
-        pathPrefix: '/docs', // Add route prefix. Optional
-        template: './src/templates/Documentation.vue', // Optional
-        plugins: [
-          [ 'gridsome-plugin-remark-shiki', { theme: 'Material-Theme-Palenight', skipInline: true } ]
-      ],
-      }
-    },
-    {
-      use: '@gridsome/source-filesystem',
-      options: {
-        path: 'blog/**/*.md',
-        typeName: 'Post',
-        refs: {
-          tags: {
-            typeName: 'Tag',
-            create: true
-          }
-        }
+        tailwindConfigFile: './tailwind.config.js',
+        mainCssFile: './src/assets/css/main.css',
       }
     },
     {
@@ -56,6 +35,31 @@ module.exports = {
         output: {
           dir: './static',
           name: 'rss.xml'
+        }
+      }
+    },
+    {
+      use: '@gridsome/vue-remark',
+      options: {
+        typeName: 'Documentation', // Required
+        baseDir: './docs', // Where .md files are located
+        pathPrefix: '/docs', // Add route prefix. Optional
+        template: './src/templates/Documentation.vue', // Optional
+        plugins: [
+          [ 'gridsome-plugein-remark-shiki', { theme: 'Material-Theme-Palenight', skipInline: true } ]
+      ],
+      }
+    },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        path: 'blog/**/*.md',
+        typeName: 'Post',
+        refs: {
+          tags: {
+            typeName: 'Tag',
+            create: true
+          }
         }
       }
     },
